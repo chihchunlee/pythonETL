@@ -1,6 +1,6 @@
 import requests
 # 1
-r = requests.get('https://www.104.com.tw/s?wd=python')
+# r = requests.get('https://www.104.com.tw/s?wd=python')
 # 2
 url = 'https://www.104.com.tw/s'
 params = {'wd':'python'}

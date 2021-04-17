@@ -4,7 +4,7 @@ import time
 
 start_time = time.time()  # 開始時間
 
-for page in range(1, 11):  # 爬取1-10頁
+for page in range(1, 2):  # 爬取1-10頁
 
     response = requests.get(
         "https://www.104.com.tw/jobs/search/?keyword=python&order=1&page=" + str(page) + "&jobsource=2018indexpoc&ro=0")
