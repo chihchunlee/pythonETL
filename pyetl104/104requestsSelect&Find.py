@@ -17,7 +17,7 @@ count=0
 for page in range(1, 5):  # 爬取1-10頁
 
     res = requests.get(url+str(page), params=params, headers=headers)
-    print(res.url)
+    # print(res.url)
 
     soup = BeautifulSoup(res.content, 'lxml')
     # print(soup)
@@ -26,11 +26,15 @@ for page in range(1, 5):  # 爬取1-10頁
     # print(jobs)
 
     for row in jobs:
-        # print(row)
+        # data-job-name
         print(row['data-job-name'])
+        # data-job-name-link
         print('https:'+row.a['href'])
+        # compeny-name
         print(row.ul.a['title'])
+        # compeny-link
         print('https:'+row.ul.a['href'])
+        # salary
         print(row.find("span", {"class": "b-tag--default"}).getText())
         print('='*60)
         count += 1
